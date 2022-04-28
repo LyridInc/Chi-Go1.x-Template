@@ -1,6 +1,11 @@
 name: go1x_chi
 description: App Description
 ignoreFiles: .git
+database:
+  alias: default
+  type: postgresql
+objectStorage:
+  alias: default
 modules:
 - name: template
   language: go1.x
