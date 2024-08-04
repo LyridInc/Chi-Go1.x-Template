@@ -4,7 +4,6 @@ ignoreFiles: .git
 modules:
 - name: template
   language: go1.x
-  web: chi
   description: Module description
   functions:
   - name: entry

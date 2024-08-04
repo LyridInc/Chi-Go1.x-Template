@@ -1,15 +1,22 @@
 package main
 
 import (
-    "net/http"
+	"net/http"
+	"os"
 
-	entry "go1x_chi.template/entry"
 	"github.com/joho/godotenv"
+	entry "go1x_chi.template/entry"
 )
 
 func main() {
 	godotenv.Load()
 
 	r := entry.Initialize()
-	http.ListenAndServe(":3000", r)
+
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "3000"
+	}
+
+	http.ListenAndServe(":"+port, r)
 }
