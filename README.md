@@ -6,7 +6,7 @@ go get
 go run ./main.go
 ```
 
-Open http://localhost:8000
+Open http://localhost:3000
 
 ## Edit the names (optional):
 Open .lyrid-definition and change the App and Module name, because this will override another applications with the same name in the platform.
